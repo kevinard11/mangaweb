@@ -28,7 +28,7 @@ public class AuthController {
     }
 
     @RequestMapping(value = "/user/{userId}", method = RequestMethod.POST)
-    public ResponseEntity<User> getUser(@PathVariable String id){
-        return new ResponseEntity<>()
+    public ResponseEntity<User> getUser(@PathVariable String userId){
+        return new ResponseEntity<>(userDao.getUser(userId), HttpStatus.FOUND);
     }
 }

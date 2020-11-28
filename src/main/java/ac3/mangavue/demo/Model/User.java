@@ -3,7 +3,6 @@ package ac3.mangavue.demo.Model;
 import lombok.*;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 @Data
 @AllArgsConstructor
@@ -12,7 +11,7 @@ import javax.validation.constraints.Pattern;
 @Setter
 public class User {
 
-    private int id;
+    private int userId;
 
     @NotNull(message = "Name cannot be null")
     private String name;
